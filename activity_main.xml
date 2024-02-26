@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pizzernia za winklem"
+        android:gravity="center"
+        android:padding="15px"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        android:background="@android:color/holo_green_light"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_marginStart="5dp"
+        android:layout_height="wrap_content"
+        android:text="Podaj wielkość picy w cm:"/>
+
+    <EditText
+        android:id="@+id/edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:inputType="number"/>
+
+    <TextView
+        android:layout_marginStart="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Podaj ciasto:"/>
+
+
+    <RadioGroup
+        android:id="@+id/radiogroup"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/grube"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Grube"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            />
+        <RadioButton
+            android:id="@+id/cienkie"
+            android:layout_toEndOf="@+id/grube"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cienkie"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            />
+
+        <RadioButton
+            android:id="@+id/sf"
+            android:layout_toEndOf="@+id/cienkie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="San Francisco"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            />
+
+    </RadioGroup>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Dodatki:"
+        android:layout_marginStart="5dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <CheckBox
+            android:id="@+id/ser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ser"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"/>
+
+        <CheckBox
+            android:id="@+id/szynka"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="szynka"
+            android:layout_toRightOf="@+id/ser"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"/>
+        <CheckBox
+            android:id="@+id/ogorek"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ogórek"
+            android:layout_toRightOf="@+id/szynka"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"/>
+
+        <CheckBox
+            android:id="@+id/kurczak"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="kurczak"
+            android:layout_below="@+id/ser"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"/>
+
+        <CheckBox
+            android:id="@+id/oliwki"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="oliwki"
+            android:layout_toRightOf="@id/kurczak"
+            android:layout_below="@id/szynka"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"/>
+
+        <CheckBox
+            android:id="@+id/sos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="sos czosnkowy"
+            android:layout_toRightOf="@id/oliwki"
+            android:layout_below="@id/ogorek"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:height="3dp"/>
+
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/holo_green_light"
+        android:text="Zamów pizzę"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:id="@+id/txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Na razie puste zamówienie :)"
+        android:gravity="center"
+        android:textSize="15sp"
+        />
+
+
+</LinearLayout>
